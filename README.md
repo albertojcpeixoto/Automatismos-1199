@@ -6,4 +6,11 @@ Exercício 2: Usando um botão de pulso colocar a funcionar dois motores. Ao car
 
 Exercício 3: Ligar um motor ao pressionar um botão, ao fim de 10 segundos ligar o segundo motor.
 
+Exercício 4: Controlar uma esteira para que de forma automática uma caixa ande de uma ponta para outra.
+
+Exercício 5: Fazer que o mecanismo de uma máquina de corte "crocodilo" feche quando o pedal é pressionado.
+             Quando é rodada uma chave seletora a máquina entra num ciclo de abrir e fechar automático.
+             Fazer com que o pedal corte o circuito automático e feche o mecanismo manualmente.
+
+
 Alberto Peixoto
