@@ -13,4 +13,13 @@ Exercício 5: Fazer que o mecanismo de uma máquina de corte "crocodilo" feche q
              Fazer com que o pedal corte o circuito automático e feche o mecanismo manualmente.
 
 
+
+
+
+Exercício ARDUINO: Simular o sinalizador de disponibilidade de um lugar de estacionamento.
+                   Quando um sensor de presença é ativado uma luz verde apaga-se e acende-se uma luz vermelha.
+                   A luz vermelha continua acesa enquanto o sensor deteta um presença.
+                   Extra: Um display indica quantos lugares estão disponíveis.
+
+
 Alberto Peixoto
