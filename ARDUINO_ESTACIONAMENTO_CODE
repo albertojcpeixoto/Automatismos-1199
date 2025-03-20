@@ -1,0 +1,39 @@
+#include <TM1637Display.h>
+
+// Pin Definitions
+const int sensorPin = 3;  // HW-201 sensor DO pin
+const int relayPin = 2;   // Relay IN pin 
+const int clkPin = 4;     // TM1637 CLK pin
+const int dioPin = 5;     // TM1637 DIO pin
+
+// TM1637 Display object
+TM1637Display display(clkPin, dioPin);
+
+// Segment representations for '0' and '1' on a single digit
+const uint8_t SEG_0[] = {0x3F, 0x00, 0x00, 0x00}; // '0' in first digit, others off
+const uint8_t SEG_1[] = {0x06, 0x00, 0x00, 0x00}; // '1' in first digit, others off
+
+void setup() {
+  pinMode(sensorPin, INPUT);  // Sensor as input
+  pinMode(relayPin, OUTPUT);  // Relay as output
+
+  digitalWrite(relayPin, LOW); // Ensure relay starts OFF
+
+  display.setBrightness(7); // Set display brightness (0-7)
+  display.setSegments(SEG_0); // Initial display: '0' on first digit
+}
+
+void loop() {
+  int sensorValue = digitalRead(sensorPin);
+
+  if (sensorValue == HIGH) {
+    digitalWrite(relayPin, HIGH); // Activate relay (Green LED OFF, Red LED ON)
+    display.setSegments(SEG_0);   // Show '0' on display
+  } else {
+    digitalWrite(relayPin, LOW);  // Deactivate relay (Red LED OFF, Green LED ON)
+    display.setSegments(SEG_1);   // Show '1' on display
+  }
+
+  delay(200); // Small delay to avoid flickering
+}
+
